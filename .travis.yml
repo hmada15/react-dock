@@ -7,3 +7,16 @@ before_install:
 
 script: 
   - docker run "hmada15/reach-dock" npm run test -- --coverage
+
+deploy:
+  provider: elasticbeanstalk
+  access_key_id: $ACCESSKEYID
+  secret_access_key:
+    secure: "$SECRETACCESSKEY"
+  region: "eu-central-1"
+  app: "react-dock"
+  env: "Reactdock-env"
+  bucket_name: "elasticbeanstalk-eu-central-1-111205789458"
+  bucket_path: "react-dock"
+  on:
+    branch: master
