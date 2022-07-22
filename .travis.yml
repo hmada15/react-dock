@@ -6,4 +6,4 @@ before_install:
   - docker build -t "hmada15/reach-dock" -f Dockerfile.dev .
 
 script: 
-  - docker run "hmada15/reach-dock" npm run test-- --coverage
+  - docker run "hmada15/reach-dock" npm run test -- --coverage
