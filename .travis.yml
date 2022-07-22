@@ -11,8 +11,7 @@ script:
 deploy:
   provider: elasticbeanstalk
   access_key_id: $ACCESSKEYID
-  secret_access_key:
-    secure: "$SECRETACCESSKEY"
+  secret_acces_key: $SECRETACCESSKEY
   region: "eu-central-1"
   app: "react-dock"
   env: "Reactdock-env"
